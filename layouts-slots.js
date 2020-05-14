@@ -3,9 +3,11 @@ import { check, sleep } from 'k6';
 import { Rate } from 'k6/metrics';
 const failureRate = new Rate('check_failure_rate');
 export const options = {
-  stages: [
-    { target: 50, duration: '2m' },
-  ],
+    stages: [
+        { target: 50, duration: '1m' },
+        { target: 50, duration: '3m' },
+        { target: 50, duration: '1m' },
+      ],
   thresholds: {
     http_req_duration: ['p(95)<100'],
     check_failure_rate: [
