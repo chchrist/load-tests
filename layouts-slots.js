@@ -30,5 +30,5 @@ export default function() {
     'status is 200': r => r.status === 200,
   });
   failureRate.add(!checkRes);
-  sleep(1);
+  // sleep(1);
 }
