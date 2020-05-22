@@ -17,7 +17,7 @@ export const options = {
   },
 };
 export default function() {
-  const response = http.get('http://35.193.240.177:3000/layouts/slots', {
+  const response = http.get('http://10.128.0.26:3000/layouts/slots', {
     headers: {
       Environment: 'release-next',
       'Accept-Language': 'en-GB',
