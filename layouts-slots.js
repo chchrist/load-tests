@@ -9,11 +9,7 @@ export const options = {
         { target: 0, duration: '1m' },
       ],
   thresholds: {
-    http_req_duration: ['p(95)<100'],
-    check_failure_rate: [
-      'rate<0.01',
-      { threshold: 'rate<=0.1', abortOnFail: true },
-    ],
+    
   },
 };
 export default function() {
