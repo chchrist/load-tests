@@ -25,6 +25,6 @@ export default function() {
   const checkRes = check(response, {
     'status is 200': r => r.status === 200,
   });
-  failureRate.add(!checkRes);
+  //failureRate.add(!checkRes);
   // sleep(1);
 }
