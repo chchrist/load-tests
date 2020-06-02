@@ -14,7 +14,7 @@ export const options = {
   },
 };
 export default function() {
-  const response = http.get('http://10.128.0.26:3000/layouts/slots', {
+  const responseSlots = http.get('http://10.128.0.26:3000/layouts/slots', {
     headers: {
       Environment: 'release-next',
       'Accept-Language': 'en-GB',
@@ -23,9 +23,54 @@ export default function() {
       Venture: 'jackpotjoy',
     },
   });
-  const checkRes = check(response, {
-    'status is 200': r => r.status === 200,
+    const responseSlots = http.get('http://10.128.0.26:3000/layouts/casino', {
+    headers: {
+      Environment: 'release-next',
+      'Accept-Language': 'en-GB',
+      Platform: 'desktop',
+      Partner: false,
+      Venture: 'jackpotjoy',
+    },
   });
+    const responseSlots = http.get('http://10.128.0.26:3000/layouts/bingo', {
+    headers: {
+      Environment: 'release-next',
+      'Accept-Language': 'en-GB',
+      Platform: 'desktop',
+      Partner: false,
+      Venture: 'jackpotjoy',
+    },
+  });
+    const responseSlots = http.get('http://10.128.0.26:3000/layouts/homepage', {
+    headers: {
+      Environment: 'release-next',
+      'Accept-Language': 'en-GB',
+      Platform: 'desktop',
+      Partner: false,
+      Venture: 'jackpotjoy',
+    },
+  });
+    const responseSlots = http.get('http://10.128.0.26:3000/layouts/slots', {
+    headers: {
+      Environment: 'release-next',
+      'Accept-Language': 'en-GB',
+      Platform: 'desktop',
+      Partner: false,
+      Venture: 'jackpotjoy',
+    },
+  });
+    const responseSlots = http.get('http://10.128.0.26:3000/layouts/jackpots', {
+    headers: {
+      Environment: 'release-next',
+      'Accept-Language': 'en-GB',
+      Platform: 'desktop',
+      Partner: false,
+      Venture: 'jackpotjoy',
+    },
+  });
+//   const checkRes = check(response, {
+//     'status is 200': r => r.status === 200,
+//   });
   //failureRate.add(!checkRes);
   // sleep(1);
 }
