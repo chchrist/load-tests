@@ -4,9 +4,9 @@ import { Rate } from 'k6/metrics';
 const failureRate = new Rate('check_failure_rate');
 export const options = {
     stages: [
-        { target: 50, duration: '30s' },
-        { target: 50, duration: '1m' },
-        { target: 0, duration: '30s' },
+        { target: 1000, duration: '1m' },
+        { target: 1000, duration: '3m' },
+        { target: 0, duration: '1m' },
       ],
   thresholds: {
     'failed requests': ['rate<0.1'], // threshold on a custom metric
