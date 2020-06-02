@@ -23,42 +23,7 @@ export default function() {
       Venture: 'jackpotjoy',
     },
   });
-    const responseCasino = http.get('http://10.128.0.26:3000/layouts/casino', {
-    headers: {
-      Environment: 'release-next',
-      'Accept-Language': 'en-GB',
-      Platform: 'desktop',
-      Partner: false,
-      Venture: 'jackpotjoy',
-    },
-  });
-    const responseBingo = http.get('http://10.128.0.26:3000/layouts/bingo', {
-    headers: {
-      Environment: 'release-next',
-      'Accept-Language': 'en-GB',
-      Platform: 'desktop',
-      Partner: false,
-      Venture: 'jackpotjoy',
-    },
-  });
-    const responseHomepage = http.get('http://10.128.0.26:3000/layouts/homepage', {
-    headers: {
-      Environment: 'release-next',
-      'Accept-Language': 'en-GB',
-      Platform: 'desktop',
-      Partner: false,
-      Venture: 'jackpotjoy',
-    },
-  });
-    const responseJackpots = http.get('http://10.128.0.26:3000/layouts/jackpots', {
-    headers: {
-      Environment: 'release-next',
-      'Accept-Language': 'en-GB',
-      Platform: 'desktop',
-      Partner: false,
-      Venture: 'jackpotjoy',
-    },
-  });
+    
 //   const checkRes = check(response, {
 //     'status is 200': r => r.status === 200,
 //   });
