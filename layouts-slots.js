@@ -27,53 +27,55 @@ export const options = {
   },
 };
 
+let url = "http://10.128.0.26:3000";
+
 export default function () {
   let userDistro = Math.floor(Math.random() * 100);
 
   switch (true) {
     case userDistro <= 88:
       http.batch([
-        ['GET', 'http://host.docker.internal:3000/categories', null, httpOptions],
-        ['GET', 'http://host.docker.internal:3000/layouts/homepage', null, httpOptions],
+        ['GET', url+'/categories', null, httpOptions],
+        ['GET', url+'/layouts/homepage', null, httpOptions],
       ]);
 
       break;
       case userDistro > 88 && userDistro <= 93:
       http.batch([
-        ['GET', 'http://host.docker.internal:3000/categories', null, httpOptions],
-        ['GET', 'http://host.docker.internal:3000/layouts/slots', null, httpOptions],
+        ['GET', url+'/categories', null, httpOptions],
+        ['GET', url+'/layouts/slots', null, httpOptions],
       ]);
       break;
     case userDistro > 93 && userDistro <= 96:
       http.batch([
-        ['GET', 'http://host.docker.internal:3000/categories', null, httpOptions],
-        ['GET', 'http://host.docker.internal:3000/layouts/bingo', null, httpOptions],
+        ['GET', url+'/categories', null, httpOptions],
+        ['GET', url+'/layouts/bingo', null, httpOptions],
       ]);
       break;
     case userDistro > 96 && userDistro < 98:
       http.batch([
-        ['GET', 'http://host.docker.internal:3000/categories', null, httpOptions],
-        ['GET', 'http://host.docker.internal:3000/layouts/free', null, httpOptions],
+        ['GET', url+'/categories', null, httpOptions],
+        ['GET', url+'/layouts/free', null, httpOptions],
       ]);
       break;
     case userDistro > 98 && userDistro < 99:
       http.batch([
-        ['GET', 'http://host.docker.internal:3000/categories', null, httpOptions],
-        ['GET', 'http://host.docker.internal:3000/layouts/poker', null, httpOptions],
-        ['GET', 'http://host.docker.internal:3000/layouts/jackpots', null, httpOptions],
+        ['GET', url+'/categories', null, httpOptions],
+        ['GET', url+'/layouts/poker', null, httpOptions],
+        ['GET', url+'/layouts/jackpots', null, httpOptions],
       ]);
       break;
     case userDistro > 99 && userDistro < 100:
       http.batch([
-        ['GET', 'http://host.docker.internal:3000/categories', null, httpOptions],
-        ['GET', 'http://host.docker.internal:3000/layouts/casino', null, httpOptions],
-        ['GET', 'http://host.docker.internal:3000/layouts/live-casino', null, httpOptions],
+        ['GET', url+'/categories', null, httpOptions],
+        ['GET', url+'/layouts/casino', null, httpOptions],
+        ['GET', url+'/layouts/live-casino', null, httpOptions],
       ]);
       break;
     default:
       http.batch([
-        ['GET', 'http://host.docker.internal:3000/categories', null, httpOptions],
-        ['GET', 'http://host.docker.internal:3000/layouts/new', null, httpOptions],
+        ['GET', url+'/categories', null, httpOptions],
+        ['GET', url+'/layouts/new', null, httpOptions],
       ]);
       break;
   }
