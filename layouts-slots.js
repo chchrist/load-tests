@@ -79,4 +79,5 @@ export default function () {
       ]);
       break;
   }
+  sleep(Math.random()*0.2)
 }
